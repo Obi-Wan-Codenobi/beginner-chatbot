@@ -48,8 +48,9 @@ if __name__== "__main__":
     row_counter = 0
     paired_rows = 0
 
-    with open("C:/Users/Admin/Desktop/learning_python/VSCODE/Beginner-chatbot/DATA/extracted data/{}/RC_{}".format(timeframe.split('-')[0], timeframe), buffer = 1000) as f:
+    with open("C:\Users\Admin\Desktop\learning_python\VSCODE\Beginner-chatbot\DATA\{}\RC_{}".format(timeframe.split('-')[0], timeframe), buffering = 1000) as f:
         for row in f:
+            print (row) #use to print row and show progress in json file
             row_counter += 1
             row = json.loads(row)
             parent_id = row['parent_id']
